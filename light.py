@@ -19,4 +19,4 @@ while(True):
     else:
         print ("on")
         GPIO.output(pin,GPIO.HIGH)
-        time.sleep(new_blance/100000)
+        time.sleep(new_blance/1000000)

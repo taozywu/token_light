@@ -11,7 +11,7 @@ while(True):
         time.sleep(2)
     else:
         print ("on")
-        time.sleep(new_blance)
+        time.sleep(new_blance/1000000)
 
 
     

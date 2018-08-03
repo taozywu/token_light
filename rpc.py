@@ -35,8 +35,8 @@ def get_balance():
         "id": 1,
     }
     content = json.loads(get_result(payload))
-    pending=content["result"]["base"]["pending"]
-    stable=content["result"]["base"]["stable"]
+    pending=(content["result"]["base"]["pending"])/1000000
+    stable=(content["result"]["base"]["stable"])/1000000
     balance=pending+stable
     return json.dumps({"balance":balance,"pending":pending,"stable":stable})
 
@@ -55,14 +55,14 @@ def pay(address,amount,msg):
     if not msg:
         payload = {
             "method": "sendtoaddress",
-            "params": [address,amount],
+            "params": [address,amount*1000000],
             "jsonrpc": "2.0",
             "id": 1,
         }
     else:
         payload = {
             "method": "sendtoaddresswithmessage",
-            "params": [address,amount,msg],
+            "params": [address,amount*1000000,msg],
             "jsonrpc": "2.0",
             "id": 1,
         }

@@ -1,0 +1,46 @@
+{
+  "name": "lightwallet",
+  "description": "TrustNote headless wallet",
+  "author": "TrustNote",
+  "version": "0.1.0",
+  "main": "wallet.js",
+  "scripts": {
+    "rpc": "node rpc_service.js",
+    "start_rpc": "pm2 start rpc_service.js",
+    "stop_rpc": "pm2 stop rpc_service.js"
+  },
+  "keywords": [
+    "wallet",
+    "headless",
+    "trustnote",
+    "light node"
+  ],
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/TrustNoteDevelopers/RPC.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/TrustNoteDevelopers/RPC/issues"
+  },
+  "browser": {
+    "request": "browser-request",
+    "secp256k1": "secp256k1/js"
+  },
+  "dependencies": {
+    "async": "^2.6.1",
+    "bitcore-lib": "^0.13.14",
+    "bitcore-mnemonic": "~1.0.0",
+    "es5class": "^2.3.1",
+    "fs-extra": "^6.0.1",
+    "json-rpc2": "^1.0.2",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "secp256k1": "^3.5.0",
+    "socks": "^2.2.0",
+    "sqlite": "^2.9.2",
+    "sqlite3": "^4.0.0",
+    "thirty-two": "^1.0.2",
+    "ws": "^5.2.0"
+  }
+}
